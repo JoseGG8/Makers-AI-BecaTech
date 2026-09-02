@@ -68,3 +68,29 @@ El diagrama debe separar claramente: datos del usuario, llamada al modelo, regla
 No queremos una recomendacion mas bonita. Queremos una recomendacion mas segura y verificable.
 <!-- MAKERS_REVIEW_2026_08_27_END -->
 
+
+<!-- MAKERS_CODE_ARCH_REVIEW_2026_09_01_START -->
+## Revision de codigo y arquitectura - 2026-09-01
+
+### Lectura docente
+
+- Hay buena direccion en safety/readiness y human-in-the-loop.
+- El problema es que la logica sigue demasiado pegada al notebook.
+- No se detecto docs/arquitectura.md.
+- Hay alerta de higiene: aparece un commit relacionado con API key. Aunque el repo sea privado, una key en Git se considera comprometida.
+
+### Revision de principios
+
+- Bien: el dominio pide guardrails y ustedes ya lo estan viendo.
+- Falta: convertir decisiones de seguridad en funciones pequenas, testeables y reutilizables.
+- Falta: explicar donde termina el modelo y donde empieza la regla deterministica.
+
+### Pendiente de equipo
+
+Crear docs/arquitectura.md y extraer una funcion tipo valuate_readiness(input) o equires_human_review(input).
+
+### Pendiente por poca evidencia individual
+
+Jose debe dejar evidencia ejecutable: no solo notebook, sino funcion + 5 casos + resultado en vals/results.md.
+<!-- MAKERS_CODE_ARCH_REVIEW_2026_09_01_END -->
+
